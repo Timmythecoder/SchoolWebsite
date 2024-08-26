@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Learning App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="subject-title">Welcome to the Learning App</h1>
+        <div>
+            <label for="subject-select">Choose a subject:</label>
+            <select id="subject-select" onchange="updateSubject()">
+                <option value="Maths">Maths</option>
+                <option value="Science">Science</option>
+                <option value="English">English</option>
+                <option value="History">History</option>
+            </select>
+
+            <label for="year-select">Choose a year:</label>
+            <select id="year-select" onchange="updateYear()">
+                <option value="7">Year 7</option>
+                <option value="8">Year 8</option>
+                <option value="9">Year 9</option>
+                <option value="10">Year 10</option>
+                <option value="11">Year 11</option>
+                <option value="12">Year 12</option>
+            </select>
+        </div>
+        <div id="content">
+            <!-- Content related to the subject and year will load here -->
+        </div>
+        <div>
+            <button id="load-questions" onclick="toggleQuestionsVisibility()">Load Questions</button>
+            <button id="start-quiz" onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div id="questions" style="display: none;">
+            <!-- Dynamic questions will load here -->
+        </div>
+        <div id="quiz-container" style="display: none;">
+            <!-- Quiz content will load here -->
+        </div>
+    </div>
+
+    <footer>
+        <p>Credits to Tim for his invaluable help in developing this app.</p>
+        <p>This app is designed for practicing subjects at school and improving your understanding of the syllabus.</p>
+    </footer>
+
+    
+</body>
+</html>
